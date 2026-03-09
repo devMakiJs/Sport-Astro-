@@ -6,20 +6,24 @@ import Stars from '../assets/ganador.svg'
     <div class="container">
         <div class="center">
             <div class="text-container">
-                <h3 class="h1-title">¡Únete a los Deportistas Rinos!</h3>
-                <p>Sé parte de la comunidad atlética del Tecnológico de Estudios Superiores Cuautitlán Izcalli. Forja tu carácter, alcanza la excelencia y representa al TESCI en cada competencia.</p>
+                <h3 class="h1-title">¡Únete al Taller de Matemáticas del TESCI!</h3>
+                <p>
+                    Forma parte de una comunidad académica dedicada al aprendizaje y al razonamiento lógico.
+                    Desarrolla tus habilidades en álgebra, cálculo y resolución de problemas junto a otros
+                    estudiantes del Tecnológico de Estudios Superiores Cuautitlán Izcalli.
+                </p>
             </div>
 
             <div class="customer-reviews m-margin">
                 <div class="flex center">
                     <img src={Stars.src}>
-                    
                 </div>
                 <small><strong>Tecnológico de Estudios Superiores Cuautitlán Izcalli</strong></small>
             </div>
+
             <div class="center">
-                <a href="#" class="button button-primary">Inscríbete Ahora</a>
-                <small class="block">Contacta con el departamento de deportes para más información.</small>
+                <a href="#registro" class="button button-primary">Inscríbete Ahora</a>
+                <small class="block">Consulta más información sobre el taller de matemáticas en el TESCI.</small>
             </div>
         </div>
 
@@ -38,6 +42,7 @@ import Stars from '../assets/ganador.svg'
                    <img src="https://images.pexels.com/photos/3058391/pexels-photo-3058391.jpeg?auto=compress&cs=tinysrgb&w=800">
                </div>
            </div>
+
            <div class="right-side-avatars">
             <div class="circular-image">
               <img src="https://images.pexels.com/photos/12599059/pexels-photo-12599059.jpeg?auto=compress&cs=tinysrgb&w=800">
@@ -54,85 +59,105 @@ import Stars from '../assets/ganador.svg'
           </div>
         </div>
     </div>
- </section>
+</section>
 
 
- <style lang="scss">
+<style lang="scss">
 
-  .product-reviews{
-    padding: 80px 0;
-    background-color: #fff;
-    .customer-reviews{
-      img{
-        width: 80px;
-      }
-      span{
-         margin-left: 10px;
-      }
-    }
-    .text-container{
-      max-width: 400px;
-      margin: 10px auto;
-    }
-    p, h3{
-      margin: 10px 0;
-    }
-    .container{
-      padding: 70px 0;
-      position: relative;
-      
-    }
-    .customer-avatars{
-      .circular-image {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        overflow: hidden;
-        display: inline-block;
-        vertical-align: middle;
-        img{
-          width: 100%;
-        }
-      }
+.product-reviews{
+  padding: 80px 0;
+  background-color: #fff;
 
-      .circular-image{
-        position: absolute;
-      }
-      .left-side-avatars .circular-image{
-        &:nth-child(1){
-          top: 0; left: 20%;
-        }
-        &:nth-child(2){
-          top: 14%; left: 5%;
-        }
-        &:nth-child(3){
-          bottom: 14%; left: 5%;
-        }
-        &:nth-child(4){
-          bottom: 0%; left: 20%;
-        }
-      }
-      .right-side-avatars .circular-image{
-        &:nth-child(1){
-          top: 0; right: 20%;
-        }
-        &:nth-child(2){
-          top: 14%; right: 5%;
-        }
-        &:nth-child(3){
-          bottom: 14%; right: 5%;
-        }
-        &:nth-child(4){
-          bottom: 0%; right: 20%;
-        }
-      }
-     
+  .customer-reviews{
+    img{
+      width: 80px;
     }
-
-    @media (max-width:700px) {
-      .circular-image img{
-        display: none;
-      }
+    span{
+      margin-left: 10px;
     }
   }
- </style>
+
+  .text-container{
+    max-width: 400px;
+    margin: 10px auto;
+  }
+
+  p, h3{
+    margin: 10px 0;
+  }
+
+  .container{
+    padding: 70px 0;
+    position: relative;
+  }
+
+  .customer-avatars{
+
+    .circular-image {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: middle;
+
+      img{
+        width: 100%;
+      }
+    }
+
+    .circular-image{
+      position: absolute;
+    }
+
+    .left-side-avatars .circular-image{
+
+      &:nth-child(1){
+        top: 0; left: 20%;
+      }
+
+      &:nth-child(2){
+        top: 14%; left: 5%;
+      }
+
+      &:nth-child(3){
+        bottom: 14%; left: 5%;
+      }
+
+      &:nth-child(4){
+        bottom: 0%; left: 20%;
+      }
+
+    }
+
+    .right-side-avatars .circular-image{
+
+      &:nth-child(1){
+        top: 0; right: 20%;
+      }
+
+      &:nth-child(2){
+        top: 14%; right: 5%;
+      }
+
+      &:nth-child(3){
+        bottom: 14%; right: 5%;
+      }
+
+      &:nth-child(4){
+        bottom: 0%; right: 20%;
+      }
+
+    }
+
+  }
+
+  @media (max-width:700px) {
+    .circular-image img{
+      display: none;
+    }
+  }
+
+}
+
+</style>

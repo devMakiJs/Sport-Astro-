@@ -1,493 +1,207 @@
-<section class="enrollment-section">
+<section id="registro" class="enrollment-section">
   <div class="container">
+
     <div class="form-wrapper">
+
       <div class="form-header">
-        <h2 class="form-title">Inscripción de Deportistas</h2>
-        <p class="form-subtitle">Completa el formulario para unirte a los equipos del TESCI</p>
+        <h2 class="form-title">Inscripción a Taller</h2>
+        <p class="form-subtitle">Completa el formulario para registrarte</p>
       </div>
 
-      <form class="enrollment-form" id="sportsForm">
+      <form id="sportsForm" class="enrollment-form">
+
         <div class="form-grid">
-          <!-- Nombre Completo -->
+
           <div class="form-group full-width">
-            <label for="fullname" class="form-label">Nombre Completo</label>
-            <input 
-              type="text" 
-              id="fullname" 
-              name="fullname" 
-              class="form-input" 
-              placeholder="Juan Pérez García"
-              required
-            >
-            <span class="form-error"></span>
+            <label class="form-label">Nombre completo</label>
+            <input id="fullname" class="form-input" type="text" required>
           </div>
 
-          <!-- Número de Control -->
           <div class="form-group">
-            <label for="controlNumber" class="form-label">Número de Control</label>
-            <input 
-              type="text" 
-              id="controlNumber" 
-              name="controlNumber" 
-              class="form-input" 
-              placeholder="2024001234"
-              required
-            >
-            <span class="form-error"></span>
+            <label class="form-label">Número de control</label>
+            <input id="controlNumber" class="form-input" type="text" required>
           </div>
 
-          <!-- Carrera -->
           <div class="form-group">
-            <label for="career" class="form-label">Carrera</label>
-            <select id="career" name="career" class="form-input" required>
-              <option value="">Selecciona tu carrera</option>
-              <option value="sistemas">Ingeniería en Sistemas Computacionales</option>
-              <option value="industrial">Ingeniería Industrial</option>
-              <option value="mecanica">Ingeniería Mecánica</option>
-              <option value="civil">Ingeniería Civil</option>
-              <option value="electrica">Ingeniería Eléctrica</option>
-              <option value="administracion">Administración de Empresas</option>
-              <option value="contabilidad">Contabilidad</option>
-              <option value="marketing">Marketing Digital</option>
+            <label class="form-label">Carrera</label>
+            <select id="career" class="form-input" required>
+              <option value="">Selecciona</option>
+              <option value="Ingeniería en Sistemas">Ingeniería en Sistemas</option>
+              <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+              <option value="Ingeniería Mecánica">Ingeniería Mecánica</option>
+              <option value="Ingeniería Civil">Ingeniería Civil</option>
+              <option value="Ingeniería Eléctrica">Ingeniería Eléctrica</option>
+              <option value="Administración">Administración</option>
             </select>
-            <span class="form-error"></span>
           </div>
 
-          <!-- Semestre -->
           <div class="form-group">
-            <label for="semester" class="form-label">Semestre</label>
-            <select id="semester" name="semester" class="form-input" required>
-              <option value="">Selecciona tu semestre</option>
-              <option value="1">1er Semestre</option>
-              <option value="2">2do Semestre</option>
-              <option value="3">3er Semestre</option>
-              <option value="4">4to Semestre</option>
-              <option value="5">5to Semestre</option>
-              <option value="6">6to Semestre</option>
-              <option value="7">7mo Semestre</option>
-              <option value="8">8vo Semestre</option>
+            <label class="form-label">Semestre</label>
+            <select id="semester" class="form-input" required>
+              <option value="">Selecciona</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
             </select>
-            <span class="form-error"></span>
           </div>
 
-          <!-- Turno -->
           <div class="form-group">
-            <label for="shift" class="form-label">Turno</label>
-            <select id="shift" name="shift" class="form-input" required>
-              <option value="">Selecciona tu turno</option>
-              <option value="matutino">Matutino</option>
-              <option value="vespertino">Vespertino</option>
-              <option value="nocturno">Nocturno</option>
+            <label class="form-label">Turno</label>
+            <select id="shift" class="form-input" required>
+              <option value="">Selecciona</option>
+              <option>Matutino</option>
+              <option>Vespertino</option>
+              <option>Nocturno</option>
             </select>
-            <span class="form-error"></span>
           </div>
 
-          <!-- Disciplina Deportiva -->
-          <div class="form-group full-width">
-            <label class="form-label">Disciplina Deportiva de Interés</label>
-            <div class="checkbox-group">
-              <label class="checkbox-label">
-                <input type="checkbox" name="sports" value="futbol">
-                <span>⚽ Fútbol</span>
-              </label>
-              <label class="checkbox-label">
-                <input type="checkbox" name="sports" value="basquetbol">
-                <span>🏀 Básquetbol</span>
-              </label>
-              <label class="checkbox-label">
-                <input type="checkbox" name="sports" value="voleibol">
-                <span>🏐 Voleibol</span>
-              </label>
-            </div>
-            <span class="form-error"></span>
-          </div>
         </div>
 
-        <button type="submit" class="submit-button">
-          <span>Enviar Inscripción</span>
-          <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+        <button class="submit-button" type="submit">
+          Enviar inscripción
         </button>
 
-        <p class="form-notice">Los datos serán utilizados únicamente para propósitos deportivos y académicos.</p>
       </form>
 
-      <div class="success-message" id="successMessage" style="display: none;">
-        <div class="success-icon">✓</div>
-        <h3>¡Inscripción Exitosa!</h3>
-        <p>Tu solicitud ha sido registrada. Pronto nos pondremos en contacto contigo.</p>
-        <button class="reset-button" onclick="resetForm()">Realizar otra inscripción</button>
-      </div>
     </div>
 
-    <div class="form-benefits">
-      <h3 class="benefits-title">¿Por qué unirse?</h3>
-      <div class="benefits-grid">
-        <div class="benefit-card">
-          <div class="benefit-icon">🏆</div>
-          <h4>Desarrollo</h4>
-          <p>Mejora tus habilidades deportivas con entrenamientos profesionales</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">👥</div>
-          <h4>Comunidad</h4>
-          <p>Forma parte de una comunidad de atletas apasionados</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">🎖️</div>
-          <h4>Representación</h4>
-          <p>Representa al TESCI en competencias nacionales e internacionales</p>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
 <style>
-  .enrollment-section {
-    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
-    padding: 80px 20px;
-    min-height: 100vh;
+
+.enrollment-section{
+  padding:80px 20px;
+  background:#f6f7fb;
+  font-family:system-ui;
+}
+
+.container{
+  max-width:800px;
+  margin:auto;
+}
+
+.form-wrapper{
+  background:white;
+  padding:40px;
+  border-radius:10px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.form-header{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.form-title{
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.form-subtitle{
+  color:#666;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.full-width{
+  grid-column:1/-1;
+}
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+}
+
+.form-label{
+  font-size:14px;
+  margin-bottom:6px;
+}
+
+.form-input{
+  padding:12px;
+  border:1px solid #ddd;
+  border-radius:6px;
+  font-size:14px;
+}
+
+.submit-button{
+  margin-top:30px;
+  width:100%;
+  padding:16px;
+  border:none;
+  background:#4f6df5;
+  color:white;
+  font-size:16px;
+  border-radius:6px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:600;
+}
+
+.submit-button:hover{
+  background:#3d57d6;
+}
+
+@media(max-width:700px){
+  .form-grid{
+    grid-template-columns:1fr;
   }
+}
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .form-wrapper {
-    background: transparent;
-    padding: 60px 0;
-    margin-bottom: 80px;
-  }
-
-  .form-header {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-
-  .form-title {
-    font-size: 2.5em;
-    font-weight: 800;
-    color: #1a202c;
-    margin: 0 0 15px 0;
-    background: linear-gradient(135deg, #667eea 0%, #667eea 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  .form-subtitle {
-    font-size: 1.1em;
-    color: #666;
-    margin: 0;
-    font-weight: 500;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  .enrollment-form {
-    display: block;
-  }
-
-  .form-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin-bottom: 40px;
-  }
-
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .full-width {
-    grid-column: 1 / -1;
-  }
-
-  .form-label {
-    font-size: 0.95em;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 10px;
-    display: block;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  .form-input {
-    padding: 14px 18px;
-    border: 2px solid #e2e8f0;
-    border-radius: 6px;
-    font-size: 1em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: all 0.3s ease;
-    background: #f9fafb;
-  }
-
-  .form-input:focus {
-    outline: none;
-    border-color: #667eea;
-    background: white;
-    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
-  }
-
-  .form-input::placeholder {
-    color: #cbd5e1;
-  }
-
-  .checkbox-group {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .checkbox-label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    font-weight: 500;
-    color: #333;
-    transition: all 0.3s ease;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  .checkbox-label input {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    accent-color: #667eea;
-  }
-
-  .checkbox-label:hover {
-    color: #667eea;
-  }
-
-  .form-error {
-    font-size: 0.85em;
-    color: #e53e3e;
-    margin-top: 6px;
-    display: none;
-  }
-
-  .form-error.show {
-    display: block;
-  }
-
-  .submit-button {
-    width: 100%;
-    padding: 16px 32px;
-    background: linear-gradient(135deg, #667eea 0%, #667eea 100%);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 1.05em;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    position: relative;
-    overflow: hidden;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  .submit-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
-  }
-
-  .submit-button:active {
-    transform: translateY(0);
-  }
-
-  .button-icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  .form-notice {
-    text-align: center;
-    font-size: 0.85em;
-    color: #666;
-    margin-top: 20px;
-    margin-bottom: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  .success-message {
-    text-align: center;
-    padding: 60px 40px;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(102, 126, 234, 0.05) 100%);
-    border-radius: 28px;
-    border: 2px solid #e2e8f0;
-  }
-
-  .success-icon {
-    font-size: 4em;
-    color: #667eea;
-    margin-bottom: 20px;
-  }
-
-  .success-message h3 {
-    font-size: 2em;
-    color: #333;
-    margin: 0 0 15px 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  .success-message p {
-    font-size: 1.05em;
-    color: #666;
-    margin: 0 0 30px 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  .reset-button {
-    padding: 12px 30px;
-    background: linear-gradient(135deg, #667eea 0%, #667eea 100%);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  .reset-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
-  }
-
-  .form-benefits {
-    background: transparent;
-    padding: 60px 0;
-  }
-
-  .benefits-title {
-    font-size: 2em;
-    font-weight: 800;
-    color: #1a202c;
-    text-align: center;
-    margin: 0 0 50px 0;
-  }
-
-  .benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-  }
-
-  .benefit-card {
-    text-align: center;
-    padding: 40px 30px;
-    background: linear-gradient(135deg, #f9fafb 0%, #f5f7fa 100%);
-    border-radius: 20px;
-    border: 1px solid #e2e8f0;
-    transition: all 0.3s ease;
-  }
-
-  .benefit-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.1);
-    border-color: #667eea;
-  }
-
-  .benefit-icon {
-    font-size: 3.5em;
-    margin-bottom: 20px;
-  }
-
-  .benefit-card h4 {
-    font-size: 1.3em;
-    color: #1a202c;
-    margin: 0 0 12px 0;
-  }
-
-  .benefit-card p {
-    font-size: 0.95em;
-    color: #718096;
-    margin: 0;
-    line-height: 1.6;
-  }
-
-  @media (max-width: 768px) {
-    .form-wrapper {
-      padding: 40px 25px;
-    }
-
-    .form-title {
-      font-size: 2em;
-    }
-
-    .form-grid {
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-
-    .checkbox-group {
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .benefits-grid {
-      grid-template-columns: 1fr;
-    }
-  }
 </style>
 
 <script>
-  const form = document.getElementById('sportsForm');
-  const successMessage = document.getElementById('successMessage');
 
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    if (validateForm()) {
-      form.style.display = 'none';
-      successMessage.style.display = 'block';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  });
+document.addEventListener("DOMContentLoaded", () => {
 
-  function validateForm() {
-    const inputs = form.querySelectorAll('.form-input[required]');
-    const checkboxes = form.querySelectorAll('input[name="sports"]');
-    let isValid = true;
+const form = document.getElementById("sportsForm");
 
-    inputs.forEach(input => {
-      const errorSpan = input.nextElementSibling;
-      if (!input.value.trim()) {
-        errorSpan.textContent = 'Este campo es obligatorio';
-        errorSpan.classList.add('show');
-        input.style.borderColor = '#e53e3e';
-        isValid = false;
-      } else {
-        errorSpan.classList.remove('show');
-        input.style.borderColor = '#e2e8f0';
-      }
-    });
+form.addEventListener("submit", function(e){
 
-    const isAnySportChecked = Array.from(checkboxes).some(cb => cb.checked);
-    if (!isAnySportChecked) {
-      const errorSpan = checkboxes[0].closest('.form-group').querySelector('.form-error');
-      errorSpan.textContent = 'Selecciona al menos una disciplina';
-      errorSpan.classList.add('show');
-      isValid = false;
-    }
+e.preventDefault();
 
-    return isValid;
-  }
+const fullname = document.getElementById("fullname").value;
+const controlNumber = document.getElementById("controlNumber").value;
+const career = document.getElementById("career").value;
+const semester = document.getElementById("semester").value;
+const shift = document.getElementById("shift").value;
 
-  function resetForm() {
-    form.reset();
-    form.style.display = 'block';
-    successMessage.style.display = 'none';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+if(!fullname || !controlNumber || !career || !semester || !shift ){
+alert("Completa todos los campos");
+return;
+}
+
+const message = 
+`¡Hola! Me quiero inscribir al taller de matemáticas del TESCI.
+
+Mis datos son:
+
+Nombre: ${fullname}
+Número de control: ${controlNumber}
+Carrera: ${career}
+Semestre: ${semester}
+Turno: ${shift}`;
+
+const phone = "525539542456";
+
+const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+window.open(url, "_blank");
+
+});
+
+});
+
 </script>

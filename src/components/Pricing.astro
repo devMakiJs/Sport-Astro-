@@ -1,270 +1,231 @@
-<section class="sports-table" id="sports">
+<section class="math-section" id="math">
   <div class="container">
-    <div class="center text-container">
-      <h3 class="h1-title">Deportes en TESCI</h3>
-      <p>Explora las disciplinas deportivas que forman parte de nuestra comunidad universitaria</p>
+
+    <div class="text-container">
+      <h2 class="section-title">Taller de Matemáticas TESCI</h2>
+      <p class="section-subtitle">
+        Refuerza tus conocimientos matemáticos y mejora tu razonamiento lógico
+        con nuestro taller académico.
+      </p>
     </div>
-    
+
     <div class="carousel-wrapper">
+
       <div class="carousel">
-        <!-- Fútbol -->
-        <div class="sport-card">
-          <div class="card-icon">⚽</div>
-          <h3 class="card-title">Fútbol</h3>
-          <p class="card-subtitle">Pasión y trabajo en equipo</p>
-          <div class="card-features">
-            <span class="feature">Entrenamientos semanales</span>
-            <span class="feature">Torneos internos y externos</span>
-            <span class="feature">Selección representativa</span>
-            <span class="feature">Infraestructura de canchas</span>
-          </div>
+
+        <!-- Álgebra -->
+        <div class="card">
+          <div class="card-icon">➗</div>
+          <h3>Álgebra</h3>
+          <p class="card-desc">Fundamentos matemáticos esenciales</p>
+
+          <ul>
+            <li>Ecuaciones algebraicas</li>
+            <li>Factorización</li>
+            <li>Expresiones algebraicas</li>
+            <li>Aplicaciones en ingeniería</li>
+          </ul>
         </div>
 
-        <!-- Básquetbol -->
-        <div class="sport-card">
-          <div class="card-icon">🏀</div>
-          <h3 class="card-title">Básquetbol</h3>
-          <p class="card-subtitle">Agilidad y estrategia</p>
-          <div class="card-features">
-            <span class="feature">Competencias universitarias</span>
-            <span class="feature">Entrenamientos en gimnasio</span>
-            <span class="feature">Ligas estatales</span>
-            <span class="feature">Eventos de 3x3</span>
-          </div>
+        <!-- Cálculo -->
+        <div class="card">
+          <div class="card-icon">📈</div>
+          <h3>Cálculo</h3>
+          <p class="card-desc">Comprende el cambio y el análisis matemático</p>
+
+          <ul>
+            <li>Límites</li>
+            <li>Derivadas</li>
+            <li>Aplicaciones del cálculo</li>
+            <li>Resolución de ejercicios</li>
+          </ul>
         </div>
 
-        <!-- Voleibol -->
-        <div class="sport-card">
-          <div class="card-icon">🏐</div>
-          <h3 class="card-title">Voleibol</h3>
-          <p class="card-subtitle">Fuerza y coordinación</p>
-          <div class="card-features">
-            <span class="feature">Voleibol de sala y playa</span>
-            <span class="feature">Entrenamientos mixtos</span>
-            <span class="feature">Selección representativa</span>
-            <span class="feature">Torneos interuniversitarios</span>
-          </div>
+        <!-- Lógica -->
+        <div class="card">
+          <div class="card-icon">🧠</div>
+          <h3>Lógica Matemática</h3>
+          <p class="card-desc">Desarrolla pensamiento analítico</p>
+
+          <ul>
+            <li>Proposiciones</li>
+            <li>Tablas de verdad</li>
+            <li>Razonamiento lógico</li>
+            <li>Resolución de problemas</li>
+          </ul>
         </div>
 
-        <!-- Duplicados para efecto infinito -->
-        <div class="sport-card">
-          <div class="card-icon">⚽</div>
-          <h3 class="card-title">Fútbol</h3>
-          <p class="card-subtitle">Pasión y trabajo en equipo</p>
-          <div class="card-features">
-            <span class="feature">Entrenamientos semanales</span>
-            <span class="feature">Torneos internos y externos</span>
-            <span class="feature">Selección representativa</span>
-            <span class="feature">Infraestructura de canchas</span>
-          </div>
+        <!-- Matemáticas para ingeniería -->
+        <div class="card">
+          <div class="card-icon">⚙️</div>
+          <h3>Matemáticas para Ingeniería</h3>
+          <p class="card-desc">Aplicaciones prácticas</p>
+
+          <ul>
+            <li>Modelos matemáticos</li>
+            <li>Análisis de datos</li>
+            <li>Resolución de problemas reales</li>
+            <li>Aplicaciones tecnológicas</li>
+          </ul>
         </div>
 
-        <div class="sport-card">
-          <div class="card-icon">🏀</div>
-          <h3 class="card-title">Básquetbol</h3>
-          <p class="card-subtitle">Agilidad y estrategia</p>
-          <div class="card-features">
-            <span class="feature">Competencias universitarias</span>
-            <span class="feature">Entrenamientos en gimnasio</span>
-            <span class="feature">Ligas estatales</span>
-            <span class="feature">Eventos de 3x3</span>
-          </div>
-        </div>
-
-        <div class="sport-card">
-          <div class="card-icon">🏐</div>
-          <h3 class="card-title">Voleibol</h3>
-          <p class="card-subtitle">Fuerza y coordinación</p>
-          <div class="card-features">
-            <span class="feature">Voleibol de sala y playa</span>
-            <span class="feature">Entrenamientos mixtos</span>
-            <span class="feature">Selección representativa</span>
-            <span class="feature">Torneos interuniversitarios</span>
-          </div>
-        </div>
       </div>
+
     </div>
+
   </div>
 </section>
 
+
 <style>
-  .sports-table {
-    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 50%, #f5f7fa 100%);
-    padding: 80px 20px;
-    position: relative;
-    overflow: hidden;
-  }
 
-  .sports-table::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.08) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.08) 0%, transparent 50%);
-    pointer-events: none;
-  }
+.math-section{
+  padding:100px 20px;
+  background:#f5f5f7;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+}
 
-  .text-container {
-    text-align: center;
-    margin-bottom: 80px;
-    position: relative;
-    z-index: 1;
-  }
+.container{
+  max-width:1200px;
+  margin:auto;
+}
 
-  .h1-title {
-    font-size: 3em;
-    font-weight: 800;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 20px;
-    letter-spacing: -1px;
-  }
+/* encabezado */
 
-  .text-container p {
-    font-size: 1.2em;
-    color: #666;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+.text-container{
+  text-align:center;
+  margin-bottom:60px;
+}
 
-  .carousel-wrapper {
-    position: relative;
-    overflow: hidden;
-    margin-top: 60px;
-    z-index: 1;
-  }
+.section-title{
+  font-size:40px;
+  font-weight:700;
+  letter-spacing:-1px;
+  margin-bottom:10px;
+  color:#1d1d1f;
+}
 
-  .carousel {
-    display: flex;
-    gap: 30px;
-    animation: scroll 30s linear infinite;
-    will-change: transform;
-  }
+.section-subtitle{
+  font-size:18px;
+  color:#6e6e73;
+  max-width:600px;
+  margin:auto;
+}
 
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
 
-  .carousel-wrapper:hover .carousel {
-    animation-play-state: paused;
-  }
+/* carrusel */
 
-  .sport-card {
-    flex: 0 0 340px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.95) 100%);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(102, 126, 234, 0.15);
-    border-radius: 24px;
-    padding: 40px 30px;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
-  }
+.carousel-wrapper{
+  overflow-x:auto;
+  padding-bottom:20px;
+}
 
-  .sport-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #667eea, transparent);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
+.carousel{
+  display:flex;
+  gap:30px;
+  scroll-snap-type:x mandatory;
+}
 
-  .sport-card:hover {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(102, 126, 234, 0.05) 100%);
-    border-color: rgba(102, 126, 234, 0.3);
-    transform: translateY(-10px);
-    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.15);
-  }
+/* tarjetas */
 
-  .sport-card:hover::before {
-    opacity: 1;
-  }
+.card{
+  flex:0 0 320px;
 
-  .card-icon {
-    font-size: 3.5em;
-    text-align: center;
-    filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.3));
-  }
+  background:white;
+  border-radius:22px;
 
-  .card-title {
-    font-size: 1.8em;
-    font-weight: 700;
-    color: #333;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+  padding:35px 28px;
 
-  .card-subtitle {
-    font-size: 1em;
-    color: #667eea;
-    margin: 0;
-    font-weight: 600;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+  scroll-snap-align:start;
 
-  .card-features {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    flex: 1;
-  }
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
 
-  .feature {
-    display: flex;
-    align-items: center;
-    color: #555;
-    font-size: 0.95em;
-    padding-left: 20px;
-    position: relative;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+  transition:all .35s ease;
+}
 
-  .feature::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #f5c8c5;
-    font-weight: bold;
-    font-size: 1.1em;
-  }
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 50px rgba(0,0,0,0.12);
+}
 
-  @media (max-width: 768px) {
-    .h1-title {
-      font-size: 2em;
-    }
+/* icono */
 
-    .text-container p {
-      font-size: 1em;
-    }
+.card-icon{
+  font-size:42px;
+  margin-bottom:18px;
+}
 
-    .sport-card {
-      flex: 0 0 280px;
-      padding: 30px 20px;
-    }
+/* título */
 
-    .card-icon {
-      font-size: 2.5em;
-    }
+.card h3{
+  font-size:22px;
+  margin-bottom:6px;
+  color:#1d1d1f;
+}
 
-    .card-title {
-      font-size: 1.4em;
-    }
-  }
+/* descripción */
+
+.card-desc{
+  color:#6e6e73;
+  font-size:15px;
+  margin-bottom:18px;
+}
+
+/* lista */
+
+.card ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.card li{
+  font-size:14px;
+  margin-bottom:10px;
+  color:#424245;
+  position:relative;
+  padding-left:18px;
+}
+
+.card li::before{
+  content:"•";
+  position:absolute;
+  left:0;
+  color:#0071e3;
+  font-weight:bold;
+}
+
+/* scrollbar estilo Apple */
+
+.carousel-wrapper::-webkit-scrollbar{
+  height:8px;
+}
+
+.carousel-wrapper::-webkit-scrollbar-track{
+  background:transparent;
+}
+
+.carousel-wrapper::-webkit-scrollbar-thumb{
+  background:#d2d2d7;
+  border-radius:10px;
+}
+
+/* responsive */
+
+@media(max-width:768px){
+
+.section-title{
+  font-size:30px;
+}
+
+.section-subtitle{
+  font-size:16px;
+}
+
+.card{
+  flex:0 0 260px;
+}
+
+}
+
 </style>
