@@ -5,125 +5,111 @@ import Folder from '../assets/folder.svg'
 import Savings from '../assets/savings.svg'
 import Gift from '../assets/gift.svg'
 import Rihno from '../assets/icorhino.svg'
-import swRihno from '../assets/rinofin.svg'
-import vlRihno from '../assets/volii.svg'
+import swRihno from '../assets/rinomate.svg'
+import vlRihno from '../assets/lastinorino.svg'
 import wnRihno from '../assets/win.svg'
-import bkRihno from '../assets/baske.svg'
+import bkRihno from '../assets/nowrino.svg'
 ---
-
 <section class="product-hero">
-    <div class="container">
-        <div class="d-table">
-            <div class="d-table-cell center">
-                <div class="hero-copy">
-                    
-                    <h1 class="h1-title">
-                        El Taller de Matemáticas del TESCI es un espacio para fortalecer aprendizaje académico.
-                    </h1>
-
-                    <p>
-                        Mejora tus conocimientos en álgebra, cálculo y resolución de problemas matemáticos.
-                       
-                    </p>
-
-                    <div class="product-cta">
-                        <a href="#registro" class="button button-primary u-full-width">
-                            Inscríbete
-                        </a>
-                    </div>
-
-                </div>
-            </div>
+  <div class="container">
+    <div class="d-table">
+      <div class="d-table-cell center">
+        <div class="hero-copy">
+          <h1 class="h1-title">
+            El Taller de Matemáticas del TESCI es un espacio para fortalecer aprendizaje académico.
+          </h1>
+          <p>
+            Mejora tus conocimientos en álgebra, cálculo y resolución de problemas matemáticos.
+          </p>
+          <div class="product-cta">
+            <a href="#registro" class="button button-primary u-full-width">
+              Inscríbete
+            </a>
+          </div>
         </div>
-
-        <div class="hero-media">
-            <img src={swRihno.src} alt="Matemáticas TESCI">
-            <img src={vlRihno.src} alt="Taller de matemáticas">
-            <img src={wnRihno.src} alt="Aprendizaje matemático">
-            <img src={bkRihno.src} alt="Estudio matemático">
-            <img src={Rihno.src} alt="Rino TESCI">
-        </div>
+      </div>
     </div>
+    <div class="hero-media">
+      <img src={swRihno.src} alt="Matemáticas TESCI">
+      <img src={vlRihno.src} alt="Taller de matemáticas">
+      <img src={wnRihno.src} alt="Aprendizaje matemático">
+      <img src={bkRihno.src} alt="Estudio matemático">
+    </div>
+    <div class="rhino-main-wrapper">
+      <img class="rhino-main" src={Rihno.src} alt="Rino TESCI">
+    </div>
+  </div>
 </section>
 
 <style lang="scss">
-
-.product-hero{
+.product-hero {
   padding: 50px 0;
 
-  .container{
+  .container {
     position: relative;
 
-    .d-table{
-      height: 500px;
+    .d-table {
+      min-height: 500px;
+      width: 100%;
+      display: table;
+    }
+
+    .d-table-cell {
+      display: table-cell;
+      vertical-align: middle;
     }
   }
 
-  .hero-media{
-    padding: 5px;
-    border-radius: 48px;
-  }
+  .hero-copy {
+    position: relative;
+    z-index: 10;
 
-  .hero-copy{
-
-    h1, p{
+    h1, p {
       max-width: 600px;
       margin: 20px auto;
       text-align: center;
     }
-
   }
 
-  .hero-media{
-
-    img{
+  .hero-media {
+    img {
       position: absolute;
       width: 160px;
+      z-index: 1;
 
-      &:nth-child(1){
-        top: 0;
-        left: -100px;
-      }
-
-      &:nth-child(2){
-        top: 0;
-        right: -100px;
-      }
-
-      &:nth-child(3){
-        top: 250px;
-        left: 0;
-      }
-
-      &:nth-child(4){
-        top: 250px;
-        right: 0;
-      }
-
-      &:nth-child(5){
-        bottom: -20px;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
+      &:nth-child(1) { top: 0; left: -100px; }
+      &:nth-child(2) { top: 0; right: -100px; }
+      &:nth-child(3) { top: 250px; left: 0; }
+      &:nth-child(4) { top: 250px; right: 0; }
     }
-
-    @media (max-width:700px) {
-
-      img{
-
-        &:nth-child(2),
-        &:nth-child(3),
-        &:nth-child(4){
-          display: none;
-        }
-
-      }
-
-    }
-
   }
 
-}
+  .rhino-main-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    position: relative;
+    z-index: 5;
 
+    .rhino-main {
+      width: 180px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .hero-media {
+      img {
+        display: none;
+      }
+    }
+
+    .rhino-main-wrapper {
+      margin-top: 20px;
+
+      .rhino-main {
+        width: 120px;
+      }
+    }
+  }
+}
 </style>
