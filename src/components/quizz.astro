@@ -1,0 +1,237 @@
+---
+
+---
+
+<section class="logic-quiz">
+  <div class="container">
+
+    <h1>🧠 Reto de Lógica Matemática</h1>
+
+    <p class="intro">
+        Resuelve las siguientes preguntas de razonamiento lógico 🧩.
+        Selecciona una opción y avanza a la siguiente pregunta.
+    </p>
+
+    <div class="quiz-box">
+
+      <div id="question"></div>
+
+      <div class="options">
+        <button class="option"></button>
+        <button class="option"></button>
+        <button class="option"></button>
+        <button class="option"></button>
+      </div>
+
+      <button id="nextBtn" class="next-btn">Siguiente →</button>
+
+      <div id="score" class="score"></div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+const quiz = [
+{
+question: "1. En un congreso, si los integrantes se sientan de 3 en 3 sobran 4 bancas. Si se sientan de 2 en 2 faltan 18 lugares. ¿Cuántos integrantes hay?",
+options: ["30","60","72","78"],
+answer: "60"
+},
+{
+question: "2. Si todos los matemáticos son lógicos y algunos lógicos son programadores. ¿Cuál afirmación es necesariamente verdadera?",
+options: [
+"Todos los programadores son matemáticos",
+"Algunos matemáticos son programadores",
+"Todos los matemáticos son lógicos",
+"Ninguna relación puede concluirse"
+],
+answer: "Todos los matemáticos son lógicos"
+},
+{
+question: "3. Un número cumple que al multiplicarlo por 4 y restarle 6 se obtiene 34. ¿Cuál es el número?",
+options: ["8","10","12","16"],
+answer: "10"
+},
+{
+question: "4. Si A → B es verdadero y B → C es verdadero. ¿Qué se puede concluir?",
+options: [
+"A → C",
+"C → A",
+"A y C son falsos",
+"B → A"
+],
+answer: "A → C"
+},
+{
+question: "5. ¿Cuál es el siguiente número en la secuencia lógica? 2, 6, 12, 20, 30, ?",
+options: ["36","40","42","48"],
+answer: "42"
+}
+];
+
+let current = 0;
+let score = 0;
+
+const questionEl = document.getElementById("question");
+const options = document.querySelectorAll(".option");
+const nextBtn = document.getElementById("nextBtn");
+const scoreEl = document.getElementById("score");
+
+function loadQuestion(){
+const q = quiz[current];
+questionEl.textContent = q.question;
+
+options.forEach((btn,i)=>{
+btn.textContent = q.options[i];
+btn.classList.remove("correct","wrong");
+btn.disabled = false;
+});
+}
+
+options.forEach(btn=>{
+btn.addEventListener("click", () => {
+
+const answer = quiz[current].answer;
+
+if(btn.textContent === answer){
+btn.classList.add("correct");
+score++;
+}else{
+btn.classList.add("wrong");
+}
+
+options.forEach(b => b.disabled = true);
+
+});
+});
+
+nextBtn.addEventListener("click", () => {
+
+current++;
+
+if(current < quiz.length){
+loadQuestion();
+}else{
+questionEl.textContent = "Quiz terminado";
+document.querySelector(".options").style.display = "none";
+nextBtn.style.display = "none";
+scoreEl.textContent = "Tu puntuación: " + score + " / " + quiz.length;
+}
+
+});
+
+loadQuestion();
+
+});
+</script>
+
+<style>
+.logic-quiz{
+padding:60px 0;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.container{
+max-width:720px;
+margin:auto;
+text-align:center;
+}
+
+.quiz-box{
+background:#f4f4f4;
+padding:40px;
+border-radius:8px;
+text-align:center;
+}
+
+#question{
+font-size:20px;
+font-weight:bold;
+margin-bottom:30px;
+line-height:1.5;
+text-align:center;
+}
+.options{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-bottom:30px;
+}
+.option{
+  padding:10px 16px;
+  height:80px;
+  border:none;
+  border-radius:14px;
+  background:white;
+  cursor:pointer;
+  font-size:16px;
+  font-weight:500;
+  transition:all 0.18s ease;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  line-height:1.3;
+  color:#1a1a1a;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+}
+.option:hover{
+  background:#f0f0f5;
+  box-shadow:0 4px 14px rgba(0,0,0,0.12);
+  transform:translateY(-1px);
+}
+.option:active{
+  transform:translateY(0);
+  box-shadow:0 1px 4px rgba(0,0,0,0.08);
+}
+.correct{
+  background:#34c759;
+  color:white;
+  box-shadow:0 4px 14px rgba(52,199,89,0.35);
+}
+.wrong{
+  background:#ff3b30;
+  color:white;
+  box-shadow:0 4px 14px rgba(255,59,48,0.35);
+}
+.next-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:14px 48px;
+  background:linear-gradient(160deg, #e63946 0%, #c1121f 100%);
+  color:white;
+  border:none;
+  border-radius:50px;
+  cursor:pointer;
+  font-size:15px;
+  font-family:inherit;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  box-shadow:0 6px 24px rgba(193,18,31,0.45), inset 0 1px 0 rgba(255,255,255,0.18);
+  transition:all 0.2s ease;
+  position:relative;
+  overflow:hidden;
+}
+.next-btn::before{
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0;
+  height:50%;
+  background:rgba(255,255,255,0.1);
+  border-radius:50px 50px 0 0;
+  pointer-events:none;
+}
+.next-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 32px rgba(193,18,31,0.55), inset 0 1px 0 rgba(255,255,255,0.18);
+}
+.next-btn:active{
+  transform:translateY(1px);
+  box-shadow:0 2px 10px rgba(193,18,31,0.3);
+}
+</style>
