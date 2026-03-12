@@ -1,60 +1,155 @@
 ---
-import Logo from '../assets/logodark.svg'
 import logrihno from '../assets/svrino.svg'
 ---
 
 <header class="nav">
-    <div class="container row">
-     <div class="nav-logo one-third column">
-         <a href="/#registro" class="logo-link">
-             <img src={logrihno.src} alt="Brand logo">
-         </a>
-     </div>
-     <nav class="one-third column">
-         <ul class="center flex">
-             <li><a href="/#features">Actividades</a></li>
-             <li><a href="/test">Informacion</a></li>
-             <li><a href="/challenge">Retos</a></li>
-         </ul>
-     </nav>
-     <div class="nav-cta one-third column">
-         <a href="/journal">Entrar</a>
-         <a href="/#registro" class="button button-primary">Registrarse</a>
-     </div>
+  <div class="container row">
+    <div class="nav-logo one-third column">
+      <a href="/#registro" class="logo-link">
+        <img src={logrihno.src} alt="Brand logo">
+      </a>
     </div>
- </header>
 
+    <nav class="one-third column" id="main-nav">
+      <ul class="center flex">
+        <li><a href="/#features">Actividades</a></li>
+        <li><a href="/test">Informacion</a></li>
+        <li><a href="/challenge">Retos</a></li>
+      </ul>
+    </nav>
 
- <style lang="scss">
+    <div class="nav-cta one-third column">
+      <a href="/journal">Entrar</a>
+      <a href="/#registro" class="button button-primary">Registrarse</a>
+    </div>
 
-.nav{
-    padding: 15px 0;
-    li{
-      list-style: none;
-      margin-top: 7px;
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const nav = document.getElementById("main-nav");
+
+  hamburger?.addEventListener("click", () => {
+    nav?.classList.toggle("open");
+    hamburger.classList.toggle("active");
+  });
+</script>
+
+<style lang="scss">
+.nav {
+  padding: 15px 0;
+  position: relative;
+
+  li {
+    list-style: none;
+    margin-top: 7px;
+  }
+
+  .nav-cta {
+    text-align: right;
+  }
+
+  a:not(.button):not(.logo-link) {
+    color: #111;
+    padding: 0 20px;
+    text-decoration: none;
+  }
+
+  .logo-link img {
+    width: 40px;
+    height: auto;
+    margin-top: 5px;
+  }
+
+  /* ── Hamburger ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #111;
+      border-radius: 2px;
+      transition: all 0.25s ease;
     }
-    .nav-cta{
-      text-align: right;
+
+    &.active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
     }
-    a:not(.button):not(.logo-link){
-      color: #111;
-      padding: 0 20px;
-      text-decoration: none;
+    &.active span:nth-child(2) {
+      opacity: 0;
     }
-    .logo-link img{
-      width: 40px;
-      height: auto;
-      margin-top: 5px;
-      
+    &.active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
     }
-    @media (max-width:700px) {
-      nav{
-        display: none;
+  }
+
+  @media (max-width: 700px) {
+    .hamburger {
+      display: flex;
+    }
+
+    nav {
+      display: none;
+      width: 100%;
+      order: 3;
+
+      &.open {
+        display: block;
       }
-      .nav-cta{
-        position: absolute;
-        right: 20px;
+
+      ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 0 4px;
+        gap: 4px;
+      }
+
+      li {
+        margin-top: 0;
+        width: 100%;
+      }
+
+      a {
+        display: block;
+        padding: 10px 16px !important;
+        border-radius: 8px;
+
+        &:hover {
+          background: #f4f4f4;
+        }
       }
     }
-  } 
- </style>
+
+    .nav-cta {
+      position: absolute;
+      right: 56px; /* deja espacio al hamburger */
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .container {
+      flex-wrap: wrap;
+      position: relative;
+    }
+  }
+}
+</style>
